@@ -111,7 +111,8 @@ audio.addEventListener("timeupdate", () => {
    3. POP UP & GLITCH
 ----------------------------------------------------------- */
 const popupData = {
-  SOUND: "LYRICS BY: Lisa GROS-DESIRS <br> Sample: MUREKA.AI <br> REMIX OF: BUILD A BITCH BY BELLA POARCH",
+  SOUND:
+    "LYRICS BY: Lisa GROS-DESIRS <br> Sample: MUREKA.AI <br> REMIX OF: BUILD A BITCH BY BELLA POARCH",
   CREDIT: "DESIGNED BY: Lisa GROS-DESIRS <br> ENGINE: GSAP 3.14",
   CONTACT: "SIGNAL LOST... Find me: Lisagd.fr",
 };
@@ -162,6 +163,25 @@ document.body.addEventListener(
   },
   { once: true }
 );
+
+// Dans nobobhere.js, ajoute ceci dans ta section AUDIO CONTROL
+
+const volumeSlider = document.getElementById("volume-slider");
+
+// Initialisation du volume au chargement
+audio.volume = 0.3;
+
+// Ecouteur pour le changement de volume
+if (volumeSlider) {
+  volumeSlider.addEventListener("input", (e) => {
+    audio.volume = e.target.value;
+  });
+
+  // Empêche le clic sur le slider de déclencher le bouton PLAY (Pause/Play)
+  volumeSlider.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+}
 
 /* -----------------------------------------------------------
    5. GESTION DU BOUTON FIX & GLITCH

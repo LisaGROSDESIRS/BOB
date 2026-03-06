@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build A Dev Girl</title>
     <link rel="stylesheet" href="notstyleme.css" />
-    <link rel="icon" href="bob_bob girl.png" type="image/x-icon">
+    <link rel="icon" href="bob_bob girl.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -51,6 +51,16 @@
 
       <div class="chooseme play" id="play-btn">
         <a href="music.mp4">PLAY</a>
+        <div class="volume-control">
+          <input
+            type="range"
+            id="volume-slider"
+            min="0"
+            max="1"
+            step="0.1"
+            value="0.1"
+          />
+        </div>
       </div>
     </nav>
 
