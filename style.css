@@ -1,0 +1,384 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212629;
+  color: white;
+  overflow: hidden;
+
+}
+
+/* NAV */
+nav {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+a {
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+  text-decoration: none;
+}
+
+/* BIG BACKGROUND TEXT */
+.bobthink {
+  position: absolute;
+  font-size: 180px;
+  font-weight: 700;
+  opacity: 0.03;
+  line-height: 160px;
+  top: 100px;
+  left: 80px;
+  pointer-events: none;
+}
+
+.terminal {
+  position: absolute;
+  bottom: 40px;
+  right: 200px;
+  width: 400px;
+  height: 160px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 11px;
+  color: #ccc;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 10;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.bobthinkbuild {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 260px;
+  top: 50px;
+  opacity: 5%;
+}
+
+.bobthinkdev {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 230px;
+  top: 400px;
+  left: 57%;
+  opacity: 5%;
+}
+
+.bobthinkgirl {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 300px;
+  top: 650px;
+  opacity: 5%;
+}
+
+.note-me {
+  position: absolute;
+  width: 300px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.left {
+  left: 100px;
+  top: 200px;
+}
+
+.right {
+  right: 100px;
+  top: 200px;
+}
+
+.note-my {
+  margin-bottom: 100px;
+}
+
+.popup-bob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.817);
+  backdrop-filter: blur(5px); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popbob-content {
+  background: #ececec3e; 
+  color: white;
+  padding: 40px;
+  border: 1px solid white;
+  width: 600px;
+  max-width: 90%;
+  position: relative;
+  font-family: "JetBrains Mono", monospace;
+  line-height: 2;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 10px;
+  color: #000000;
+}
+
+.close-btn:hover {
+  background: #000000;
+  color: white;
+}
+
+.needed-fixing {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* SLIDER STYLE */
+input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: #aaa;
+  border-radius: 4px;
+  outline: none;
+  margin-top: 50px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ffffff80;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between; /* Pousse White à gauche et Dark à droite */
+  margin-top: 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.fix-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  padding: 12px 20px;
+  background: #ffffff1a;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fix-btn:hover {
+  background: #ffffff33;
+}
+
+.glitch {
+  animation: glitchAnim 0.4s steps(2, end) infinite;
+}
+
+@keyframes glitchAnim {
+  0% {
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    transform: translate(-5px, 5px);
+    filter: hue-rotate(90deg);
+  }
+  40% {
+    transform: translate(5px, -5px);
+    filter: hue-rotate(180deg);
+  }
+  60% {
+    transform: translate(-5px, -5px);
+    filter: hue-rotate(270deg);
+  }
+  80% {
+    transform: translate(5px, 5px);
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+}
+
+/* White flash overlay */
+.flash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+}
+
+/* --- BLOCKER MOBILE --- */
+/* --- BLOCKER MOBILE (Positionné pour dominer tout le reste) --- */
+#mobile-blocker {
+  display: none; 
+  position: fixed;
+  inset: 0; 
+  background-color: #000000;
+  z-index: 10000; 
+  color: #dd00ff;
+  font-family: "JetBrains Mono", monospace;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.blocker-content h1 {
+  font-size: clamp(18px, 5vw, 24px); 
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border: 1px solid #dd00ff;
+  padding: 15px;
+  display: inline-block;
+}
+
+.blocker-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* --- ACTIVATION DU BLOQUEUR --- */
+/* On cible les écrans mobiles ET les tablettes */
+@media screen and (max-width: 1024px) {
+  #mobile-blocker {
+    display: flex !important; 
+  }
+  
+
+  body > *:not(#mobile-blocker) {
+    display: none;
+  }
+
+  body {
+    background-color: black;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .bobthinkbuild {
+  position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 17vw;
+    top: 20px;
+    opacity: 15%;
+}
+
+.bobthinkdev {
+  position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15vw;
+    top: 250px;
+    left: 30%;
+    opacity: 15%;
+}
+
+.bobthinkgirl {
+    position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16vw;
+    top: 450px;
+    opacity: 15%;
+    left: 16%;
+    
+}
+
+video {
+  position: absolute;
+  right: -25%;
+  width: 100vw;
+  height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+.terminal {
+  position: absolute;
+  bottom: -60%;
+  right: 150px;
+  width: 400px;
+  height: 160px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 15px;
+  font-size: 11px;
+  color: #ccc;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.fix-btn {
+  position: absolute;
+  bottom: -60%;
+  right: 50px;
+  padding: 12px 20px;
+  background: #ffffff1a;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+}

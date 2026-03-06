@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build A Dev Girl</title>
+    <link rel="stylesheet" href="notstyleme.css" />
+    <link rel="icon" href="bob_bob girl.png" type="image/x-icon">
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="mobile-blocker">
+      <div class="blocker-content">
+        <h1>[SYSTEM_ACCESS_DENIED]</h1>
+        <p>
+          This experience is optimized for desktop only.<br />Please switch to a
+          computer to fix the system.
+        </p>
+      </div>
+    </div>
+
+    <audio id="bg-music" src="This ain_t Build_A_Dev _A Dev_.mp3" loop></audio>
+
+    <nav>
+      <div class="chooseme">
+        <a href="next.html">BUILD</a>
+      </div>
+
+      <div class="chooseme">
+        <a href="music.mp4">SOUND</a>
+      </div>
+
+      <div class="chooseme">
+        <a href="music.mp4">CREDIT</a>
+      </div>
+
+      <div class="chooseme">
+        <a href="music.mp4">CONTACT</a>
+      </div>
+
+      <div class="chooseme play" id="play-btn">
+        <a href="music.mp4">PLAY</a>
+      </div>
+    </nav>
+
+    <div id="popup-me" class="popup-me">
+      <div class="popup-content">
+        <button class="close-btn">X</button>
+        <h2 id="popup-title">TITRE</h2>
+        <div id="popup-body">Contenu ici...</div>
+      </div>
+    </div>
+
+    <div class="nothinkingbob">
+      <p class="ithinkbuild" id="lyric-1"></p>
+      <p class="ithinkdev" id="lyric-2"></p>
+      <p class="ithinkgirl" id="lyric-3"></p>
+    </div>
+
+    <model-viewer
+      src="mybody.glb"
+      alt="Modèle 3D Dev Girl"
+      auto-rotate
+      camera-controls
+      disable-zoom
+      shadow-intensity="1"
+      power-preference="high-performance"
+      interaction-prompt="none"
+      interpolation-decay="200"
+      ;
+    >
+    </model-viewer>
+
+    <div class="console-logs">
+      <p>> Bash</p>
+
+      <span id="scramble-text-1"></span> <br /><br />
+      <span id="scramble-text-2"></span> <br /><br />
+      <span id="scramble-text-3"></span> <br />
+
+      <button class="fix-btn">YOU DON'T NEED TO FIX ME</button>
+    </div>
+
+    <div class="scrolling-text">
+      <div class="udontchoose">
+        <span>YOU DON'T GET TO CHOOSE •&nbsp;</span>
+        <span>YOU DON'T GET TO CHOOSE •&nbsp;</span>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrambleTextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="nobobhere.js"></script>
+  </body>
+</html>
